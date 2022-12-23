@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const h1 = React.createElement('h1', { className: 'title' }, 'Hello react');
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    {h1}
     <App />
   </React.StrictMode>
 );
