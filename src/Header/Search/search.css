@@ -1,0 +1,15 @@
+.menu-bar-search {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 60px;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.menu-bar-search-field {
+    border: 0px;
+    width: 100%;
+    
+}

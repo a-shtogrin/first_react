@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './cart.css';
 
 export const Cart = () => {
@@ -6,7 +6,7 @@ export const Cart = () => {
     <div className="cart">
       <img src={'/images/cart.png'} alt="cart" />
       <div className="cart-counter">
-        <span className="cart-counter-text">1</span>
+        <span className="cart-counter-text">?</span>
       </div>
     </div>
   );

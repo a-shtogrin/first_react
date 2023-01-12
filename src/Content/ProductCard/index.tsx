@@ -9,7 +9,7 @@ type ProductPropsType = {
   color?: string;
   price?: number;
   count?: number;
-  productCount?: number;
+  productCount?: string;
 };
 /* //? - свойство не обязательное */
 
@@ -22,7 +22,7 @@ export const ProductCard = (props: ProductPropsType) => {
   const { price } = props;
 
   const [count, setCount] = useState(1);
-  const [productCount, setProductCount] = useState(0);
+  const [productCount, setProductCount] = useState('product-wrapper');
 
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
@@ -32,12 +32,12 @@ export const ProductCard = (props: ProductPropsType) => {
     setCount((prev) => prev - 1);
   };
 
-  const incrementProductHandler = () => {
-    setProductCount((prev) => prev + 1);
+  const sendToCart = () => {
+    setProductCount('product-wrapper-added')
   };
 
   return (
-      <div className="product-wrapper">
+      <div className={ productCount }>
         <div className="product-image">
           <img src={image} alt="img" />
         </div>
@@ -65,8 +65,7 @@ export const ProductCard = (props: ProductPropsType) => {
             <h2>{count}</h2>
             <button className='product-counter-btn' onClick={incrementHandler}>+</button>
           </div>
-          <button className="sent-to-cart" onClick={incrementProductHandler}>В КОРЗИНУ</button>
-          <span>Товар добавлен в корзину {productCount} раз</span>
+          <button className="sent-to-cart" onClick={sendToCart}>В КОРЗИНУ</button>
         </div>
       </div>
   );

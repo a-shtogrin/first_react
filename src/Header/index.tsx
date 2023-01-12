@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import { Cart } from './Cart';
+import { Search } from './Search';
 
 export const Header = () => {
   return (
@@ -10,13 +11,9 @@ export const Header = () => {
           <img src={'/images/logo.png'} alt="logo" />
           <div className="top-menu-city">
             <img src={'/images/pin.png'} alt="pin" />
-            <select name="cities" id="city">
-              Москва
-            </select>
           </div>
           <div className="top-bar-phone">
             <p>8 495 018-32-10</p>
-            <img src={'/images/arrow-down.png'} alt="arrow-down" />
             <a href="">Заказать звонок</a>
           </div>
           <ul className="top-bar-list">
@@ -39,7 +36,9 @@ export const Header = () => {
         </div>
         <div className="menu-bar">
           <div className="menu-bar-catalog">
-            <img src={'/images/burger.png'} alt="burger" />
+            <a href="">
+              <img src={'/images/burger.png'} alt="burger" />
+            </a>
             <p>КАТАЛОГ ТОВАРОВ</p>
           </div>
           <div className="menu-bar-stocks">
@@ -48,14 +47,7 @@ export const Header = () => {
           <div className="menu-bar-brends">
             <p>БРЕНДЫ</p>
           </div>
-          <form className="menu-bar-search">
-            <input
-              type="search"
-              placeholder="Что вы ищете?"
-              className="menu-bar-search-field"
-            ></input>
-            <img src={'/images/loupe.png'} alt="loupe" />
-          </form>
+          <Search />
           <div className="menu-bar-cart">
             <img src={'/images/man.png'} alt="man" />
             <img src={'/images/heard.png'} alt="heard" />
