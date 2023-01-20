@@ -1,12 +1,12 @@
 import React from 'react';
-import './content.css';
+import style from './Content.module.scss';
 import { ProductCard } from './ProductCard';
 
 export const Content = () => {
   return (
-    <div className="content">
-      <div className="container">
-        <div className="content-cards">
+    <div className={style.content}>
+      <div className={style.container}>
+        <div className={style.cards}>
           <ProductCard
             image={'/images/1-320x250.jpg'}
             name={'Смеситель для ванны с душем ПРОФСАН ПСМ-156-К65 СТАНДАРТ-А тип См-ВУДРНШлА'}

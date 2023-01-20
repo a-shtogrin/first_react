@@ -1,0 +1,10 @@
+.wrapper {
+ /*    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 210px auto 300px;
+}

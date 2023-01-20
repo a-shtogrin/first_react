@@ -1,0 +1,28 @@
+.contacts {
+    display: flex;
+   
+    background: #F5F5F5;
+    width: 100vw;
+}
+
+.container {
+    width: 1540px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    align-items: center;
+  
+
+    &_adress {
+        display: flex;
+        flex-direction: column;
+    };
+    &_time {
+        display: flex;
+        flex-direction: column;
+    };
+}

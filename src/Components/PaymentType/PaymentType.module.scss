@@ -1,0 +1,20 @@
+.payment {
+    display: flex;
+    width: 100vw;
+    background: #F5F5F5;
+
+    &_cash {
+        background-color:  #F5F5F5;
+
+    };
+
+    &_noncash {
+        background-color:  #F5F5F5;
+
+    }
+}
+
+.container {
+    width: 1540px;
+    margin: 0 auto;
+}
