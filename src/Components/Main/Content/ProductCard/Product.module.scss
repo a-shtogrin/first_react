@@ -56,22 +56,27 @@ img {
     display: flex;
     justify-content: space-around;
     width: 250px;
-    
+
+    &_groupset {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        background: #fdfdfd;
+        padding: 0 5px;
+        width: 80px;
+        border-radius: 3px;
+    }
+
+    &_btn {
+        border: none;
+        background: #fff;
+        font-size: 25px;
+    }
+
 }
 
-.groupset {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    background: #fdfdfd;
-    padding: 0 5px;
-    width: 80px;
-    border-radius: 3px;
-}
-
-.btn {
+btn {
     border: none;
     background: #fff;
     font-size: 25px;
-
 }

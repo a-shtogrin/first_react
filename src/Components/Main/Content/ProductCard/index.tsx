@@ -58,16 +58,16 @@ export const ProductCard = (props: ProductPropsType) => {
       </div>
       <div className={style.price}>{price} руб/шт</div>
       <div className={style.group}>
-        <div className={style.groupset}>
-          <button className={style.btn} disabled={count === 1} onClick={decrementHandler}>
+        <div className={style.group_groupset}>
+          <button className={style.group_btn} disabled={count === 1} onClick={decrementHandler}>
             -
           </button>
           <h2>{count}</h2>
-          <button className={style.btn} onClick={incrementHandler}>
+          <button className={style.group_btn} onClick={incrementHandler}>
             +
           </button>
         </div>
-        <button className={style.sent} onClick={addToCart}>
+        <button className={style.group_sent} onClick={addToCart}>
           {sendBtn}
         </button>
       </div>
