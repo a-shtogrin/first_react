@@ -8,6 +8,7 @@ import { NotFound } from 'Containers/NotFound';
 import { Delivery } from 'Containers/Delivery';
 import { Articles } from 'Containers/Articles';
 import { Contacts } from 'Containers/Contacts';
+import { Auth } from 'Containers/Auth';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path={routes.delivery} element={<Delivery />} />
       <Route path={routes.articles} element={<Articles />} />
       <Route path={routes.contacts} element={<Contacts />} />
+      <Route path={routes.auth} element={<Auth />} />
     </Routes>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import style from './Product.module.scss';
-import './wrapper.css';
 
 type ProductPropsType = {
   image: string;
@@ -17,7 +16,7 @@ export const ProductCard = (props: ProductPropsType) => {
   const { image, name, code, material, color, price } = props;
 
   const [count, setCount] = useState(1);
-  const [btnState, setBtnState] = useState(false);
+  const [isInCart, setIsInCart] = useState(false);
 
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
@@ -27,19 +26,19 @@ export const ProductCard = (props: ProductPropsType) => {
     setCount((prev) => prev - 1);
   };
 
-  const addToCart = () => {
-    setBtnState((prevState) => !prevState);
-  };
+  // const addToCart = () => {
+  //   setBtnState((prevState) => !prevState);
+  // };
 
-  let wrapperState = 'wrapper';
-  let sendBtn = 'В КОРЗИНУ';
-  if (btnState) {
-    wrapperState = 'wrapper_active';
-    sendBtn = 'ДОБАВЛЕНО';
-  }
+  // let wrapperState = 'wrapper';
+  // let sendBtn = 'В КОРЗИНУ';
+  // if (btnState) {
+  //   wrapperState = 'wrapper_active';
+  //   sendBtn = 'ДОБАВЛЕНО';
+  // }
 
   return (
-    <div className={`${wrapperState}`}>
+    <div className={isInCart ? style.wrapper_active : style.wrapper}>
       <img src={image} alt="img" />
       <div className={style.name}>{name}</div>
       <div className={style.attributes}>
@@ -67,8 +66,8 @@ export const ProductCard = (props: ProductPropsType) => {
             +
           </button>
         </div>
-        <button className={style.group_sent} onClick={addToCart}>
-          {sendBtn}
+        <button className={style.group_sent} onClick={() => setIsInCart((prevState) => !prevState)}>
+          {isInCart ? 'ВЕРНУТЬ' : 'В КОРЗИНУ'}
         </button>
       </div>
     </div>

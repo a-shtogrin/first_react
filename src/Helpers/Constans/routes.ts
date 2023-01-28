@@ -4,5 +4,6 @@ export const routes = {
     delivery: '/delivery',
     articles: '/articles',
     contacts: '/contacts',
+    auth: '/autorithation',
     notFound: '*'
 }

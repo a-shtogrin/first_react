@@ -45,8 +45,9 @@ export const Header = () => {
           </div>
           <Search />
           <div className={style.menu_cart}>
-            <img src={'/images/man.png'} alt="man" />
-            <img src={'/images/heard.png'} alt="heard" />
+            <Link to={routes.auth}>
+              <img src={'/images/man.png'} alt="man" />
+            </Link>
             <Cart />
           </div>
         </div>
