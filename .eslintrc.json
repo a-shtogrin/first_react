@@ -28,6 +28,10 @@
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/member-delimiter-style": "off",
     "indent": "off",
-    "@typescript-eslint/indent": "off"
+    "@typescript-eslint/indent": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "multiline-ternary": "off"
     }
 }

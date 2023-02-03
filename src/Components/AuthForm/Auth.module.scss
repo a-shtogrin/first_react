@@ -22,7 +22,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        
         height: 60px;
         width: 500px;
 
@@ -47,17 +47,37 @@
         border-style: solid;
         border-width: 4px;
         border-color: red;
+        background-color: rgb(225, 154, 154);
         color: #1d1d1d;
         height: 60px;
         width: 240px;
         padding: 0 24px;
         font-size: 18px;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
+
+    &_init{
+        border-radius: 16px;
+        border-style: solid;
+        border-width: 2px;
+        color: #1d1d1d;
+        height: 60px;
+        width: 240px;
+        padding: 0 24px;
+        font-size: 18px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
 
     .error {
         color: red;
         font-size: 25px;
       }
 }
+

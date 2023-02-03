@@ -24,13 +24,13 @@ export const Footer = () => {
               </p>
             </div>
             <div className={style.lines_first_net}>
-              <a href="">
+              <a href="tg://resolve?domain=ggpromarket" >
                 <img src="/images/telegramm.png" alt="telegramm" />
               </a>
-              <a href="">
+              <a href="whatsapp://send?text=Я с сайта GGproMarket&amp;phone=+79060346664" >
                 <img src="/images/twitter.png" alt="twitter" />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/ggpromarket/" >
                 <img src="/images/instagram.png" alt="instagram" />
               </a>
             </div>

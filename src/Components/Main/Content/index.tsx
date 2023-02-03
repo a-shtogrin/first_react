@@ -6,6 +6,7 @@ export const Content = () => {
   return (
     <div className={style.content}>
       <div className={style.container}>
+      <h1>Главная/ каталог товаров</h1>
         <div className={style.cards}>
           <ProductCard
             image={'/images/1-320x250.jpg'}
@@ -29,6 +30,54 @@ export const Content = () => {
             code={'23235'}
             material={'латунь'}
             price={1350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
+            color={'хром'}
+          />
+          <ProductCard
+            image={'/images/4-320x250.jpg'}
+            name={'Смеситель Rossinka W W35-23 для кухонной мойки'}
+            code={'23235'}
+            material={'латунь'}
+            price={3350}
             color={'хром'}
           />
           <ProductCard

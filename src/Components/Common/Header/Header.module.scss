@@ -49,19 +49,51 @@
     align-items: center;
     height: 60px;
     margin: 14px 0 14px 0;
+    justify-content: space-between;
+    background:#b9d4ef;
+   
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        a {
+            text-decoration: none;
+            color: #FBFAF9;
+        }
+    }
 
     &_catalog {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 0 20px 0 20px;
         height: 60px;
-        background: #004C93;
-        color: #FBFAF9;
-        gap: 20px;
+        background: #01315f;
+       
     }
 
-    &_stocks {
+
+    &_payment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        height: 60px;
+        background: #0c5191;
+       
+    }
+
+    &_delivery {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -71,13 +103,23 @@
         color: #FBFAF9;
     }
 
-    &_brends {
+    &_articles {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 20px 0 20px;
         height: 60px;
         background: #2B7BC6;
+        color: #FBFAF9;
+    }
+
+    &_contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        height: 60px;
+        background: #4f8cc5;
         color: #FBFAF9;
     }
 
@@ -88,7 +130,7 @@
         justify-content: space-around;
         align-items: center;
         background: #F1F8FF;
-        width: 240px;
+        flex: 0.2;
         padding: 0 20px 0 20px;
         height: 60px;
     }
@@ -101,6 +143,113 @@
         width: 130px;
         padding: 10px;
     }
+
+    
+
+    
+//     /* * {
+//     margin: 0px;
+// } */
+
+// .container {
+//     width: 1540px;
+//     margin: 0 auto;
+// }
+
+// .header {
+//     background:#E1EEFB; 
+//     width: 100vw;  
+// }
+
+// .top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: #2B7BC6;
+//     height: 37px;
+//     margin-top: 44px;
+
+//     &_city {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+    
+//     &_phone {
+//         width: 300px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+    
+//     &_list {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         list-style: none;
+//         gap: 20px;
+//     }
+// }
+
+
+
+// .menu {
+//     display: flex;
+//     align-items: center;
+//     height: 60px;
+//     margin: 14px 0 14px 0;
+
+//     &_catalog {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding: 0 20px 0 20px;
+//         height: 60px;
+//         background: #004C93;
+//         color: #FBFAF9;
+//         gap: 20px;
+//     }
+
+//     &_stocks {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 0 20px 0 20px;
+//         height: 60px;
+//         background: #1061AB;
+//         color: #FBFAF9;
+//     }
+
+//     &_brends {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 0 20px 0 20px;
+//         height: 60px;
+//         background: #2B7BC6;
+//         color: #FBFAF9;
+//     }
+
+
+
+//     &_cart {
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//         background: #F1F8FF;
+//         width: 240px;
+//         padding: 0 20px 0 20px;
+//         height: 60px;
+//     }
+
+//     }
+
+//     .navigate {
+//         display: flex;
+//         justify-content: space-between;
+//         width: 130px;
+//         padding: 10px;
+//     }
 
     
 

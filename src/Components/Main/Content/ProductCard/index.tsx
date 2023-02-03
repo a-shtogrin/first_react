@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { CartCounterSelectors } from 'Store';
+import { CartCounterSliceActions } from 'Store/CartCounter/slice';
 import style from './Product.module.scss';
 
 type ProductPropsType = {
@@ -17,6 +20,17 @@ export const ProductCard = (props: ProductPropsType) => {
 
   const [count, setCount] = useState(1);
   const [isInCart, setIsInCart] = useState(false);
+  const disppatch = useDispatch();
+  const cartCounter = useSelector(CartCounterSelectors.getCartCounter);
+
+  const cartCounterHandler = () => {
+    setIsInCart((prevState) => !prevState);
+    console.log('isInCart = ', isInCart);
+    if (isInCart) {
+      disppatch(CartCounterSliceActions.setCartCounter({ counter: 1 }));
+    }
+    console.log('counter = ', cartCounter);
+  };
 
   const incrementHandler = () => {
     setCount((prev) => prev + 1);
@@ -25,17 +39,6 @@ export const ProductCard = (props: ProductPropsType) => {
   const decrementHandler = () => {
     setCount((prev) => prev - 1);
   };
-
-  // const addToCart = () => {
-  //   setBtnState((prevState) => !prevState);
-  // };
-
-  // let wrapperState = 'wrapper';
-  // let sendBtn = 'В КОРЗИНУ';
-  // if (btnState) {
-  //   wrapperState = 'wrapper_active';
-  //   sendBtn = 'ДОБАВЛЕНО';
-  // }
 
   return (
     <div className={isInCart ? style.wrapper_active : style.wrapper}>
@@ -61,12 +64,12 @@ export const ProductCard = (props: ProductPropsType) => {
           <button className={style.group_btn} disabled={count === 1} onClick={decrementHandler}>
             -
           </button>
-          <h2>{count}</h2>
+          <h3>{count}</h3>
           <button className={style.group_btn} onClick={incrementHandler}>
             +
           </button>
         </div>
-        <button className={style.group_sent} onClick={() => setIsInCart((prevState) => !prevState)}>
+        <button className={style.group_sent} onClick={cartCounterHandler}>
           {isInCart ? 'ВЕРНУТЬ' : 'В КОРЗИНУ'}
         </button>
       </div>

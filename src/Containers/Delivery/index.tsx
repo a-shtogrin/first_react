@@ -1,11 +1,11 @@
 import React from 'react';
-import { PageWrapper } from 'Components/Common/PageWrapper';
 import { DeliveryList } from 'Components/Delivery';
+import { CheckAuth } from 'Components/Common/CheckAuth';
 
 export const Delivery = () => {
   return (
-    <PageWrapper>
+    <CheckAuth>
       <DeliveryList />
-    </PageWrapper>
+    </CheckAuth>
   );
 };
