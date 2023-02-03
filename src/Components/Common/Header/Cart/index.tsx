@@ -1,17 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { CartCounterSelectors } from 'Store';
-import './cart.css';
+import style from './Cart.module.scss'
 
 export const Cart = () => {
   const cartCounter = useSelector(CartCounterSelectors.getCartCounter);
 
   return (
-    <div className="cart">
+    <div className={style.cart}>
       <img src={'/images/cart.png'} alt="cart" />
       {cartCounter !== 0 && (
-        <div className="cart-counter">
-          <span className="cart-counter-text">{cartCounter}</span>
+        <div className={style.cart_counter}>
+          <span className={style.cart_counter_text}>{cartCounter}</span>
         </div>
       )}
     </div>
