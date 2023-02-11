@@ -11,12 +11,14 @@ import { Articles } from 'Containers/Articles';
 import { Contacts } from 'Containers/Contacts';
 import { Auth } from 'Containers/Auth';
 import { PageWrapper } from 'Components/Common/PageWrapper';
+import { Fruits } from 'Containers/Fruits';
 
 function App() {
   return (
     <Routes>
       <Route path={routes.main} element={<PageWrapper />}>
         <Route index element={<Main />} />
+        <Route path={routes.fruits} element={<Fruits />} />
         <Route path={routes.payment} element={<Payment />} />
         <Route path={routes.delivery} element={<Delivery />} />
         <Route path={routes.articles} element={<Articles />} />

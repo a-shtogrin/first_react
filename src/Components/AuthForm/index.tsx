@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { UserSliceActions } from 'Store';
 import { users } from 'Helpers/Users/users';
 import { PasswordInput } from 'Components/Common/Header/PasswordInput';
+import { emailRegExp } from 'Helpers/RegExps/regexp';
 
 export const AuthForm = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -17,9 +18,6 @@ export const AuthForm = () => {
   const [isEmail, setIsEmail] = useState(false);
 
   const dispatch = useDispatch();
-
-  const emailRegExp =
-    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
   const changeHandler =
     (fieldName: 'email' | 'password') => (event: ChangeEvent<HTMLInputElement>) => {

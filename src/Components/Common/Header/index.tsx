@@ -27,6 +27,7 @@ export const Header = () => {
         <div className={style.menu}>
           <ul>
             <MenuSection className={style.menu_catalog} text="Каталог товаров" rout={routes.main} />
+            <MenuSection className={style.menu_fruits} text="Фрукты" rout={routes.fruits} />
             <MenuSection className={style.menu_payment} text="Оплата" rout={routes.payment} />
             <MenuSection className={style.menu_delivery} text="Доставка" rout={routes.delivery} />
             <MenuSection className={style.menu_articles} text="Статьи" rout={routes.articles} />
