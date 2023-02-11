@@ -19,6 +19,7 @@ function App() {
       <Route path={routes.main} element={<PageWrapper />}>
         <Route index element={<Main />} />
         <Route path={routes.fruits} element={<Fruits />} />
+        {/* <Route path={routes.oneFruit} element={<OneFruit />} /> */}
         <Route path={routes.payment} element={<Payment />} />
         <Route path={routes.delivery} element={<Delivery />} />
         <Route path={routes.articles} element={<Articles />} />

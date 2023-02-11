@@ -2,22 +2,22 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchFruits, fetchOneFruit } from './effects';
 import { OneFruitType } from './types';
 
+const oneFruit: OneFruitType | {} = {};
+
 const initialState = {
   fruits: [] as OneFruitType[],
-  oneFruit: {
-    name: '',
-    id: 0,
-    genus: '',
-    family: '',
-    order: '',
-    nutritions: {
-      carbohydrates: 0,
-      protein: 0,
-      fat: 0,
-      calories: 0,
-      sugar: 0,
-    },
-  },
+  oneFruit,
+  name: '',
+  id: 0,
+  genus: '',
+  family: '',
+  order: '',
+  nutritions: {},
+  carbohydrates: 0,
+  protein: 0,
+  fat: 0,
+  calories: 0,
+  sugar: 0,
   loading: false,
   error: {},
 };
