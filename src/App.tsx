@@ -11,15 +11,15 @@ import { Articles } from 'Containers/Articles';
 import { Contacts } from 'Containers/Contacts';
 import { Auth } from 'Containers/Auth';
 import { PageWrapper } from 'Components/Common/PageWrapper';
-import { Fruits } from 'Containers/Fruits';
+import { Clients } from 'Containers/Clients';
 
 function App() {
   return (
     <Routes>
       <Route path={routes.main} element={<PageWrapper />}>
         <Route index element={<Main />} />
-        <Route path={routes.fruits} element={<Fruits />} />
-        {/* <Route path={routes.oneFruit} element={<OneFruit />} /> */}
+        <Route path={routes.clients} element={<Clients />} />
+        {/* <Route path={routes.oneClient} element={<OneClient />} /> */}
         <Route path={routes.payment} element={<Payment />} />
         <Route path={routes.delivery} element={<Delivery />} />
         <Route path={routes.articles} element={<Articles />} />
@@ -32,15 +32,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <Routes>
-<Route path={routes.main} element={<Main />} />
-<Route path={routes.payment} element={<Payment />} />
-<Route path={routes.notFound} element={<NotFound />} />
-<Route path={routes.delivery} element={<Delivery />} />
-<Route path={routes.articles} element={<Articles />} />
-<Route path={routes.contacts} element={<Contacts />} />
-<Route path={routes.auth} element={<Auth />} />
-</Routes> */
-}

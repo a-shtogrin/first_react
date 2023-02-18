@@ -1,7 +1,7 @@
 export const routes = {
     main: '/',
-    fruits: '/fruits',
-    oneFruits: '/fruits:fruitId',
+    clients: '/clients',
+    oneClient: '/clients:clientId',
     payment: '/payment',
     delivery: '/delivery',
     articles: '/articles',

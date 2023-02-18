@@ -1,27 +1,35 @@
 import React from 'react';
-import style from './FruitList.module.scss';
+import style from './ClientList.module.scss';
 import { routes } from 'Helpers/Constans/routes';
 import { Link } from 'react-router-dom';
-import { OneFruitType } from 'Store/Fruits/types';
+import { OneClientType } from 'Store/Clients/types';
 import { ListItem } from './ListItem';
 
-type FrutListPropsType = {
-  fruitData: OneFruitType[]
-}
+type ClientListPropsType = {
+  clientData: OneClientType[];
+};
 
-export const FruitList = ({ fruitData }: FrutListPropsType) => {
+export const ClientList = ({ clientData }: ClientListPropsType) => {
   return (
-    <div className={style.delivery}>
+    <div className={style.content}>
       <div className={style.container}>
+        <h1>Наши клиенты</h1>
         <div className={style.cards}>
-          {fruitData.map((el) => (
+          {clientData.map((el) => (
             <ListItem
-              key={el.id}
+              key={el.id.value}
+              email={el.email}
               name={el.name}
-              genus={el.genus}
               id={el.id}
-              family={el.family}
-              order={el.order}
+              gender={el.gender}
+              phone={el.phone}
+              picture={el.picture}
+              location={el.location}
+              cell={el.cell}
+              dob={el.dob}
+              login={el.login}
+              nat={el.nat}
+              registered={el.registered}
             />
           ))}
         </div>

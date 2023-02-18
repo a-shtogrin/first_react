@@ -1,12 +1,17 @@
+import { useToggle } from 'Helpers/Hooks';
 import React from 'react';
 import style from './Content.module.scss';
 import { ProductCard } from './ProductCard';
 
 export const Content = () => {
+  // const { flag, toggle } = useToggle(true);
   return (
     <div className={style.content}>
       <div className={style.container}>
-      <h1>Главная/ каталог товаров</h1>
+        <h1>Главная/ каталог товаров</h1>
+
+      {/*   <button type='button' onClick={toggle}>TOGGLE CONTENT</button>
+        {flag ? ( */}
         <div className={style.cards}>
           <ProductCard
             image={'/images/1-320x250.jpg'}
@@ -97,6 +102,8 @@ export const Content = () => {
             color={'хром'}
           />
         </div>
+        {/* )
+        : <div>CONTENT CLOSED</div>} */}
       </div>
     </div>
   );
