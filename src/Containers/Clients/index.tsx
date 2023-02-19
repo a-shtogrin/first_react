@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { CheckAuth } from 'Components/Common/CheckAuth';
 import { useDispatch, useSelector } from 'react-redux';
 import { ClientEffects, ClientSelectors } from 'Store';
-import { ClientList } from 'Components/FruitsList';
+import { ClientList } from 'Components/ClientList';
 
 export const Clients = () => {
   const loading = useSelector(ClientSelectors.getClientLoading);
@@ -15,8 +15,8 @@ export const Clients = () => {
   return loading ? (
     <h1>Loading..</h1>
   ) : (
-    <CheckAuth>
+    // <CheckAuth>
       <ClientList clientData={clientData}/>
-    </CheckAuth>
+    // </CheckAuth>
   );
 };

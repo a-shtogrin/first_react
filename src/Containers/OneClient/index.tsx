@@ -9,6 +9,7 @@ export const OneClient = () => {
   const { clientId } = useParams();
   const dispatch = useDispatch();
   const clientData = useSelector(ClientSelectors.getOneClientData);
+  console.log(clientId);
 
   useEffect(() => {
     if (clientId) {

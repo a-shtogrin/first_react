@@ -21,7 +21,7 @@ export const ListItem = (props: OneClientType) => {
   return (
     <div className={style.wrapper}>
       <img src={picture.thumbnail} alt="img" />
-      <Link to={`/posts/${id.value}`}>
+      <Link to={`/clients/${id.value}`}>
       <div className={style.name}>{name.title} {name.first} {name.last}</div>
       </Link>
       <div className={style.attributes}>

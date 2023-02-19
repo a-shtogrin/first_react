@@ -6,7 +6,7 @@ export const fetchClients = createAsyncThunk('clients/all', async () => {
   return data;
 });
 
-export const fetchOneClient = createAsyncThunk('client/byId', async (value: string) => {
-    const { data } = await networkInstance.get(`api/people/${value}`);
+export const fetchOneClient = createAsyncThunk('clients/byId', async (value: string) => {
+    const { data } = await networkInstance.get(`api/?id.value=${value}`);
     return data;
   });

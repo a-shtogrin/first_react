@@ -12,6 +12,7 @@ import { Contacts } from 'Containers/Contacts';
 import { Auth } from 'Containers/Auth';
 import { PageWrapper } from 'Components/Common/PageWrapper';
 import { Clients } from 'Containers/Clients';
+import { OneClient } from 'Containers/OneClient';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Route path={routes.main} element={<PageWrapper />}>
         <Route index element={<Main />} />
         <Route path={routes.clients} element={<Clients />} />
-        {/* <Route path={routes.oneClient} element={<OneClient />} /> */}
+        <Route path={routes.oneClient} element={<OneClient />} />
         <Route path={routes.payment} element={<Payment />} />
         <Route path={routes.delivery} element={<Delivery />} />
         <Route path={routes.articles} element={<Articles />} />

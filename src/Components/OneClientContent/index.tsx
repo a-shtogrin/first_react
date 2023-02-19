@@ -2,7 +2,10 @@ import React from 'react';
 import { OneClientType } from 'Store/Clients/types';
 import style from './OneClientContent.module.scss';
 
-// type OneClientContentPropsType = {
+type OneClientContentPropsType = {
+  oneClientData: OneClientType;
+};
+
 //   name: {
 //     title: string;
 //     first: string;
@@ -35,20 +38,20 @@ import style from './OneClientContent.module.scss';
 //   };
 // };
 
-export const OneClientContent = (oneClientData: OneClientType) => {
+export const OneClientContent = ({ oneClientData }: OneClientContentPropsType) => {
     const { picture, name, email, id, phone, location, registered } = oneClientData;
   return (
     <div className={style.content}>
       <div className={style.container}>
-        {/* <h1>{ name.title } {name.first} {name.last }</h1>
+        <h1>{ name.title } {name.first} {name.last }</h1>
         <image href={picture.large}/>
         <div className={style.attributes}>
           <p>id:{id.value}</p>
           <p>phone:{phone}</p>
-          <p>city:{location.city} country:{location.country} state:{location.state} street {location.street.name}</p> */}
+          <p>city:{location.city} country:{location.country} state:{location.state} street {location.street.name}</p>
           <p>{email}</p>
-          {/* <p>age:{registered.date} date:{registered.date}</p>
-        </div> */}
+          <p>age:{registered.date} date:{registered.date}</p>
+        </div>
       </div>
     </div>
   );
