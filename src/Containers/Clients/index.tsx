@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { CheckAuth } from 'Components/Common/CheckAuth';
 import { useDispatch, useSelector } from 'react-redux';
 import { ClientEffects, ClientSelectors } from 'Store';
 import { ClientList } from 'Components/ClientList';
@@ -12,11 +11,5 @@ export const Clients = () => {
     dispatch(ClientEffects.fetchClients());
   }, []);
 
-  return loading ? (
-    <h1>Loading..</h1>
-  ) : (
-    // <CheckAuth>
-      <ClientList clientData={clientData}/>
-    // </CheckAuth>
-  );
+  return loading ? <h1>Loading..</h1> : <ClientList clientData={clientData} />;
 };

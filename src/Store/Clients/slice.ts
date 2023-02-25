@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchClients, fetchOneClient } from './effects';
-import { OneClientType } from './types';
+// import { OneClientType } from './types';
 
-const oneClient: OneClientType | {} = {};
+// const oneClient: OneClientType | {} = {};
 
 const initialState = {
   clients: {
@@ -10,60 +10,8 @@ const initialState = {
     info: {},
   },
   oneClient: {
-    name: {
-      title: '',
-      first: '',
-      last: '',
-    },
-    location: {
-      street: {
-        number: 0,
-        name: '',
-      },
-      city: '',
-      state: '',
-      country: '',
-      postcode: '',
-      coordinates: {
-        latitude: '',
-        longitude: '',
-      },
-      timezone: {
-        offset: '',
-        description: '',
-      },
-    },
-    email: '',
-    registered: {
-      date: '',
-      age: 0,
-    },
-    phone: '',
-    id: {
-      name: '',
-      value: '',
-    },
-    picture: {
-      large: '',
-      medium: '',
-      thumbnail: '',
-    },
-    nat: '',
-    gender: '',
-    dob: {
-      date: '',
-      age: 0,
-    },
-    login: {
-      uuid: '',
-      username: '',
-      password: '',
-      salt: '',
-      md5: '',
-      sha1: '',
-      sha256: '',
-    },
-    cell: '',
+    results: [],
+    info: {},
   },
   loading: false,
   error: {},
@@ -99,3 +47,60 @@ const clientSlice = createSlice({
 });
 
 export const { name: clientSliceName, reducer: clientSliceReducer } = clientSlice;
+
+//   {
+//   name: {
+//     title: '',
+//     first: '',
+//     last: '',
+//   },
+//   location: {
+//     street: {
+//       number: 0,
+//       name: '',
+//     },
+//     city: '',
+//     state: '',
+//     country: '',
+//     postcode: '',
+//     coordinates: {
+//       latitude: '',
+//       longitude: '',
+//     },
+//     timezone: {
+//       offset: '',
+//       description: '',
+//     },
+//   },
+//   email: '',
+//   registered: {
+//     date: '',
+//     age: 0,
+//   },
+//   phone: '',
+//   id: {
+//     name: '',
+//     value: '',
+//   },
+//   picture: {
+//     large: '',
+//     medium: '',
+//     thumbnail: '',
+//   },
+//   nat: '',
+//   gender: '',
+//   dob: {
+//     date: '',
+//     age: 0,
+//   },
+//   login: {
+//     uuid: '',
+//     username: '',
+//     password: '',
+//     salt: '',
+//     md5: '',
+//     sha1: '',
+//     sha256: '',
+//   },
+//   cell: '',
+// }

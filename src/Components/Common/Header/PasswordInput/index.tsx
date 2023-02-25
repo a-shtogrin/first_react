@@ -20,12 +20,9 @@ export const PasswordInput = ({
 
   return (
     <div className={style.wrapper}>
-      {
-      isShow
-      ? (
+      {isShow ? (
         <FiEyeOff className={style.wrapper_eye} onClick={() => setIsShow(!isShow)} />
-      )
-      : (
+      ) : (
         <FiEye className={style.wrapper_eye} onClick={() => setIsShow(!isShow)} />
       )}
       <input

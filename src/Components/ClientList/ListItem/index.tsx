@@ -16,7 +16,7 @@ import style from './ListItem.module.scss';
 // };
 
 export const ListItem = (props: OneClientType) => {
-  const { name, phone, id, email, picture } = props;
+  const { email, name, phone, picture, id } = props;
 
   return (
     <div className={style.wrapper}>
