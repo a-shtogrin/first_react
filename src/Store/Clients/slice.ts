@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchClients, fetchOneClient } from './effects';
-// import { OneClientType } from './types';
+import { OneClientType } from './types';
 
-// const oneClient: OneClientType | {} = {};
+const oneClient: OneClientType | {} = {};
 
 const initialState = {
   clients: {
-    results: [],
+    results: [] as OneClientType[],
     info: {},
   },
   oneClient: {

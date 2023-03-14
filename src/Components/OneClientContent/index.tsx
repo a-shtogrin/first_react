@@ -4,11 +4,11 @@ import { OneClientType } from 'Store/Clients/types';
 import style from './OneClientContent.module.scss';
 
 type OneClientContentPropsType = {
-  oneClientData: OneClientType[];
+  oneClientData: OneClientType;
 };
 
 export const OneClientContent = ({ oneClientData }: OneClientContentPropsType) => {
-  const [{ name, picture, id, email, phone, location, dob }] = oneClientData;
+  const { name, picture, id, email, phone, location, dob } = oneClientData;
   return (
     <div className={style.content}>
       <div className={style.container}>
